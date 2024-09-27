@@ -35,7 +35,7 @@ gu1 = midnm[0:5]
 gu2 = lnm[0]
 mkuser = f'{gu0}{gu1}-{gu2}'.lower()
 user = f'{dye["cyan+"]}{mkuser}: {dye["null"]}'
-juser = user = f'{dye["cyan+"]}{mkuser}{dye["null"]}'
+juser = f'{dye["cyan+"]}{mkuser}{dye["null"]}'
 print(f'Tudo certo {fnm}, o username é {mkuser}!\nÉ com ele você vai acessar seus cursos!\n')
 		#get pin then check it
 while True:
