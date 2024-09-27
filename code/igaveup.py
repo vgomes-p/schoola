@@ -103,4 +103,55 @@ Acesse sua conta para assitir as aulas''')
 print(f'''=====================================
     BEM VIND@ de volta {juser}
 =====================================
-Aqui estão os seus cursos em progresso''')
+Percebi que você ainda não completou seus dados...
+Antes de te enviar para os seus cursos, irei pedir
+para que você complete, ok? Vai ser rapidinho!''')
+		#get datas
+mkage = input(f'Qual sua idade?\n{user}')
+mkemail = input(f'Qual o seu email?\n{user}')
+print(f'Okay, {juser}, Agora você pode usar o email\n{mkemail} para acessar sua conta!')
+mkphone = input(f'Qual seu telefone (o mesmo do WhatsApp)?\n{user}')
+while True:
+	allowing = input(f'''Você autoriza que entremos em contato com você via WhatsApp?
+O contato será para informar de novos cursos na plataforma!
+[Por favor, responda 's' sim e 'n' para não]\n{user}''')
+	if allowing.lower() == 'n':
+		while True:
+			check0 = input(f'''Você poderia conferir se todos os dados estão corretos?
+Nome: {fnm}
+Idade: {mkage}
+Email: {mkemail}
+User: {mkuser}
+Telefone: {mkphone} (Contato concedido)
+
+Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
+''')
+			if check0.lower() == 's':
+				pass
+			elif check0.lower() == 'n':
+				print('Okay, aguarde enquanto eu reinicio o sistema!')
+				exit()
+
+	elif allowing.lower() == 's':
+		while True:
+			check1 = input(f'''Você poderia conferir se todos os dados estão corretos?
+Nome: {fnm}
+Idade: {mkage}
+Email: {mkemail}
+User: {mkuser}
+Telefone: {mkphone} (Contato concedido)
+
+Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
+''')
+			if check1.lower() == 's':
+				pass
+			elif check1.lower() == 'n':
+				print('Okay, aguarde enquanto eu reinicio o sistema!')
+				exit()
+
+	else:
+		print(f'{dye["red+"]}Resposta não aceita, responda conforme exigido!{dye["null"]}')
+		del(allowing)
+		continue
+
+print(f'Perfeito, {juser}!\nAqui estão os seus cursos em progresso:')
