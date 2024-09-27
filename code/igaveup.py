@@ -144,9 +144,11 @@ Telefone: {mkphone} (Contato concedido)
 Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
 ''')
 			if check1.lower() == 's':
+				break
 				pass
 			elif check1.lower() == 'n':
 				print('Okay, aguarde enquanto eu reinicio o sistema!')
+				break
 				exit()
 
 	else:
