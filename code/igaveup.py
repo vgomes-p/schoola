@@ -127,7 +127,7 @@ Telefone: {mkphone} (Contato concedido)
 Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
 ''')
 			if check0.lower() == 's':
-				pass
+				break
 			elif check0.lower() == 'n':
 				print('Okay, aguarde enquanto eu reinicio o sistema!')
 				exit()
@@ -145,13 +145,12 @@ Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
 ''')
 			if check1.lower() == 's':
 				break
-				pass
 			elif check1.lower() == 'n':
 				print('Okay, aguarde enquanto eu reinicio o sistema!')
-				break
 				exit()
 
 	else:
+		clear()
 		print(f'{dye["red+"]}Resposta não aceita, responda conforme exigido!{dye["null"]}')
 		del(allowing)
 		continue
