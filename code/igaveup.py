@@ -154,5 +154,6 @@ Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
 		print(f'{dye["red+"]}Resposta não aceita, responda conforme exigido!{dye["null"]}')
 		del(allowing)
 		continue
+	break
 
 print(f'Perfeito, {juser}!\nAqui estão os seus cursos em progresso:')
