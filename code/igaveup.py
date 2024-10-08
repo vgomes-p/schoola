@@ -1,7 +1,7 @@
 #imports
 import os
-import getpass
-import time
+import getpass as gp
+import time as tm
 
 #Functions
 
@@ -27,7 +27,7 @@ pnm = f'{dye["cyan+"]}{nm}: {dye["null"]}'
 midnm = input(f'e qual o seu nome do meio?\n{pnm}')
 lnm = input(f'e o seu último nome?\n{pnm}')
 fnm = f'{dye["white+_"]}{nm} {midnm} {lnm}{dye["null"]}'
-time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 clear()
 		#get user
 gu0 = nm[0]
@@ -39,21 +39,21 @@ juser = f'{dye["cyan+"]}{mkuser}{dye["null"]}'
 print(f'Tudo certo {fnm}, o username é {mkuser}!\nÉ com ele você vai acessar seus cursos!\n')
 		#get pin then check it
 while True:
-	mkpin = getpass.getpass(f'''Agora está na hora de definir uma senha!
+	mkpin = gp.getpass(f'''Agora está na hora de definir uma senha!
 {dye["pink+"]}[Ao digitar, sua senha não irá aparecer por
 segurança, mas está sendo registada!]{dye["null"]}
 {user}''')
-	testmkpin = getpass.getpass(f'Confirme sua senha!\n{user}')
+	testmkpin = gp.getpass(f'Confirme sua senha!\n{user}')
 	if testmkpin != mkpin:
 		print('As senhas não batem...\nVamos tentar de novo, lembre de digitar senhas iguais!')
 		del(mkpin, testmkpin)
-		time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+		time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 		clear()
 		continue
 	elif testmkpin == mkpin:
 		pass
 	break
-time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 clear()
 
 	#second act (log in)
@@ -66,36 +66,36 @@ Acesse sua conta para assitir as aulas''')
 	aclog = input('User: ')
 	if aclog != mkuser:
 		print(f'O usuário {aclog} não está cadastrado no sistema.\nPor favor, entre um usuário valido!')
-		time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+		time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 		del(aclog)
 		clear()
 		continue
 	elif aclog == mkuser:
-		acpin0 = getpass.getpass(f'Entre a senha para acessar a conta {mkuser}.\n{user}')
+		acpin0 = gp.getpass(f'Entre a senha para acessar a conta {mkuser}.\n{user}')
 		if acpin0 != mkpin:
 			clear()
-			acpin1 = getpass.getpass(f'{dye["red+"]}A senha informada está errada!{dye["null"]}\nPor favor, entre a senha de acesso para {mkuser}!\n{user}')
-			time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+			acpin1 = gp.getpass(f'{dye["red+"]}A senha informada está errada!{dye["null"]}\nPor favor, entre a senha de acesso para {mkuser}!\n{user}')
+			time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 			clear()
 			if acpin1 != mkpin:
 				print(f'Parece que você não é o user {mkuser}...\nVocê será reencaminhado para tela de login em breve!')
-				time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+				time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 				del(aclog, acpin0, acpin1)
 				clear()
 				continue
 			elif acpin1 == mkpin:
 				print(f'Login efetuado com sucesso!')
-				time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+				time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 				clear()
 				pass
 			break
 		elif acpin0 == mkpin:
 			print(f'Login efetuado com sucesso!')
-			time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+			time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 			clear()
 			pass
 		break
-	time.sleep(0.5) ###DEFINIR UM TIME SLEEP CERTO
+	time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
 	clear()
 	pass
 
