@@ -27,7 +27,7 @@ pnm = f'{dye["cyan+"]}{nm}: {dye["null"]}'
 midnm = input(f'e qual o seu nome do meio?\n{pnm}')
 lnm = input(f'e o seu último nome?\n{pnm}')
 fnm = f'{dye["white+_"]}{nm} {midnm} {lnm}{dye["null"]}'
-time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 clear()
 		#get user
 gu0 = nm[0]
@@ -47,13 +47,13 @@ segurança, mas está sendo registada!]{dye["null"]}
 	if testmkpin != mkpin:
 		print('As senhas não batem...\nVamos tentar de novo, lembre de digitar senhas iguais!')
 		del(mkpin, testmkpin)
-		time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+		tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 		clear()
 		continue
 	elif testmkpin == mkpin:
 		pass
 	break
-time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 clear()
 
 	#second act (log in)
@@ -66,7 +66,7 @@ Acesse sua conta para assitir as aulas''')
 	aclog = input('User: ')
 	if aclog != mkuser:
 		print(f'O usuário {aclog} não está cadastrado no sistema.\nPor favor, entre um usuário valido!')
-		time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+		tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 		del(aclog)
 		clear()
 		continue
@@ -75,27 +75,27 @@ Acesse sua conta para assitir as aulas''')
 		if acpin0 != mkpin:
 			clear()
 			acpin1 = gp.getpass(f'{dye["red+"]}A senha informada está errada!{dye["null"]}\nPor favor, entre a senha de acesso para {mkuser}!\n{user}')
-			time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+			tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 			clear()
 			if acpin1 != mkpin:
 				print(f'Parece que você não é o user {mkuser}...\nVocê será reencaminhado para tela de login em breve!')
-				time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+				tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 				del(aclog, acpin0, acpin1)
 				clear()
 				continue
 			elif acpin1 == mkpin:
 				print(f'Login efetuado com sucesso!')
-				time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+				tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 				clear()
 				pass
 			break
 		elif acpin0 == mkpin:
 			print(f'Login efetuado com sucesso!')
-			time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+			tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 			clear()
 			pass
 		break
-	time.sleep(0.5) ###DEFINIR UM time SLEEP CERTO
+	tm.sleep(0.5) ###DEFINIR UM tm SLEEP CERTO
 	clear()
 	pass
 
