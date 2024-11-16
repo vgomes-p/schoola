@@ -122,7 +122,7 @@ Nome: {fnm}
 Idade: {mkage}
 Email: {mkemail}
 User: {mkuser}
-Telefone: {mkphone} (Contato concedido)
+Telefone: {mkphone} (Contato não concedido)
 
 Os dados estão corretos? [Responda 's' para sim e 'n' para não!]
 ''')
